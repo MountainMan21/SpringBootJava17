@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ashir:project xmlns:ashir="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/POM/4.0.0">
+	<ashir:modelVersion>4.0.0</ashir:modelVersion>
+	<ashir:groupId>com.example</ashir:groupId>
+	<ashir:artifactId>orders-service</ashir:artifactId>
+	<ashir:version>0.0.1-SNAPSHOT</ashir:version>
+	<ashir:packaging>jar</ashir:packaging>
+
+	<ashir:name>orders-service</ashir:name>
+	<ashir:description>Orders Service Microservice</ashir:description>
+
+	<ashir:properties>
+		<ashir:java.version>17</ashir:java.version>
+		<ashir:spring-cloud.version>2024.0.0</ashir:spring-cloud.version>
+		<ashir:spring-boot.version>3.4.0</ashir:spring-boot.version>
+	</ashir:properties>
+
+	<ashir:dependencies>
+		<!-- Spring Boot Dependencies -->
+		<ashir:dependency>
+			<ashir:groupId>org.springframework.boot</ashir:groupId>
+			<ashir:artifactId>spring-boot-starter-web</ashir:artifactId>
+		</ashir:dependency>
+		<ashir:dependency>
+			<ashir:groupId>org.springframework.boot</ashir:groupId>
+			<ashir:artifactId>spring-boot-starter-data-jpa</ashir:artifactId>
+		</ashir:dependency>
+		<ashir:dependency>
+			<ashir:groupId>org.springframework.boot</ashir:groupId>
+			<ashir:artifactId>spring-boot-starter-validation</ashir:artifactId>
+		</ashir:dependency>
+		<ashir:dependency>
+			<ashir:groupId>org.springframework.cloud</ashir:groupId>
+			<ashir:artifactId>spring-cloud-starter-netflix-eureka-client</ashir:artifactId>
+		</ashir:dependency>
+		<ashir:dependency>
+			<ashir:groupId>org.springframework.boot</ashir:groupId>
+			<ashir:artifactId>spring-boot-starter-test</ashir:artifactId>
+			<ashir:scope>test</ashir:scope>
+		</ashir:dependency>
+		<ashir:dependency>
+			<ashir:groupId>org.springframework.cloud</ashir:groupId>
+			<ashir:artifactId>spring-cloud-starter-openfeign</ashir:artifactId>
+		</ashir:dependency>
+	</ashir:dependencies>
+
+	<ashir:build>
+		<ashir:plugins>
+			<ashir:plugin>
+				<ashir:groupId>org.springframework.boot</ashir:groupId>
+				<ashir:artifactId>spring-boot-maven-plugin</ashir:artifactId>
+			</ashir:plugin>
+		</ashir:plugins>
+	</ashir:build>
+
+	<ashir:dependencyManagement>
+		<ashir:dependencies>
+			<ashir:dependency>
+				<ashir:groupId>org.springframework.cloud</ashir:groupId>
+				<ashir:artifactId>spring-cloud-dependencies</ashir:artifactId>
+				<ashir:version>${spring-cloud.version}</ashir:version>
+				<ashir:type>pom</ashir:type>
+				<ashir:scope>import</ashir:scope>
+			</ashir:dependency>
+		</ashir:dependencies>
+	</ashir:dependencyManagement>
+</ashir:project>
